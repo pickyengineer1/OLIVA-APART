@@ -1,10 +1,10 @@
 {
-  "name": "OLIVA APART Yönetim",
+  "name": "OLIVA APART",
   "short_name": "OLIVA",
-  "start_url": "./?v=5",
+  "start_url": "./?v=6",
   "display": "standalone",
-  "background_color": "#f7f4ec",
-  "theme_color": "#53654a",
+  "background_color": "#f4f1e8",
+  "theme_color": "#f4f1e8",
   "icons": [
     {
       "src": "icon-192.png",

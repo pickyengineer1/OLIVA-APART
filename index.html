@@ -1,4 +1,8 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#53654a"><link rel="manifest" href="manifest.json"><title>Oliva Apart Yönetim V5</title><style>
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#53654a"><link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="OLIVA"><title>Oliva Apart Yönetim V6</title><style>
 :root{--olive:#53654a;--olive2:#718168;--cream:#f7f4ec;--paper:#fffdf8;--ink:#252820;--muted:#77796f;--terr:#bd7654;--line:#e5e0d4;--ok:#66805d;--warn:#c8894b;--danger:#b85e54}*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--cream);color:var(--ink)}button,input,select{font:inherit}.app{display:grid;grid-template-columns:230px 1fr;min-height:100vh}.side{background:#fbfaf5;border-right:1px solid var(--line);padding:24px 16px;position:sticky;top:0;height:100vh}.brand{font-family:Georgia,serif;font-size:25px;letter-spacing:2px;margin:4px 8px 30px}.brand small{display:block;font:10px system-ui;letter-spacing:5px;color:var(--muted);margin-top:4px}.nav button{display:flex;width:100%;border:0;background:none;padding:12px;border-radius:10px;margin:4px 0;text-align:left;color:#50534b}.nav button.active,.nav button:hover{background:#e6eadf;color:#34402f}.main{padding:24px 28px 90px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}.hello h1{margin:0;font:700 26px Georgia,serif}.hello p{margin:5px 0;color:var(--muted)}.primary{border:0;background:var(--olive);color:white;padding:11px 16px;border-radius:10px;cursor:pointer}.stats{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:0 4px 18px #6c62430a}.stat b{display:block;font-size:23px;margin-top:8px}.stat span{font-size:12px;color:var(--muted)}.section{margin-top:18px}.sectionhead{display:flex;justify-content:space-between;align-items:center}.section h2{font-size:17px}.calendar{overflow:auto;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:12px}.grid{min-width:900px;display:grid;grid-template-columns:80px repeat(14,1fr);position:relative}.cell{height:42px;border-right:1px solid #eee9df;border-bottom:1px solid #eee9df;padding:10px 6px;font-size:11px}.head{height:34px;color:var(--muted);text-align:center}.room{font-weight:700}.res{height:26px;margin:7px 2px;border-radius:7px;color:white;padding:5px 8px;font-size:11px;white-space:nowrap;overflow:hidden;background:var(--olive2)}.res.terr{background:var(--terr)}.today{background:#f3ead9}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:14px}.listitem{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}.badge{font-size:11px;padding:5px 8px;border-radius:999px;background:#e5eee1;color:#42613b}.bottom{display:none}.modal{position:fixed;inset:0;background:#0006;display:none;align-items:center;justify-content:center;padding:20px;z-index:10}.modal.show{display:flex}.panel{background:var(--paper);width:min(620px,100%);max-height:90vh;overflow:auto;border-radius:18px;padding:20px}.form{display:grid;grid-template-columns:1fr 1fr;gap:12px}.form label{font-size:12px;color:var(--muted)}.form input,.form select{width:100%;padding:11px;border:1px solid var(--line);border-radius:9px;background:white;margin-top:5px}.actions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}.ghost{border:1px solid var(--line);background:white;padding:10px 14px;border-radius:9px}
 @media(max-width:900px){.app{display:block}.side{display:none}.main{padding:18px 14px 92px}.top{align-items:flex-start}.hello h1{font-size:22px}.stats{grid-template-columns:repeat(2,1fr)}.stats .stat:nth-child(n+5){display:none}.twocol{grid-template-columns:1fr}.calendar{margin:0 -14px;border-radius:0;border-left:0;border-right:0}.bottom{position:fixed;display:grid;grid-template-columns:repeat(5,1fr);bottom:0;left:0;right:0;background:#fffdf8eF;backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:7px max(8px,env(safe-area-inset-right)) calc(7px + env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left));z-index:5}.bottom button{border:0;background:none;font-size:10px;color:#676a62}.bottom i{display:block;font-style:normal;font-size:20px;margin-bottom:2px}.bottom .plus i{background:var(--olive);color:white;border-radius:50%;width:38px;height:38px;line-height:38px;margin:-22px auto 3px}.form{grid-template-columns:1fr}.desktopOnly{display:none}}
 </style>
@@ -62,17 +66,75 @@
  .detailgrid,.financecards{grid-template-columns:1fr 1fr}
 }
 </style>
+
+<style>
+@media(max-width:900px){
+ :root{--mobile-bg:#f4f1e8;--deep:#344331}
+ body{background:var(--mobile-bg)}
+ .main{padding:calc(10px + env(safe-area-inset-top)) 15px calc(98px + env(safe-area-inset-bottom))}
+ .mobileTop{display:flex;align-items:center;justify-content:space-between;padding:3px 0 13px;margin:0;border-bottom:1px solid #e3ded0}
+ .mobileBrand{display:flex;align-items:center;gap:9px}
+ .mobileBrand img{width:43px;height:43px;border-radius:13px;box-shadow:0 4px 14px #35442f20}
+ .mobileBrand b{display:block;font:700 17px Georgia,serif;letter-spacing:1.3px;color:#263022}
+ .mobileBrand small{display:block;font-size:8px;letter-spacing:3px;color:#8a8b80;margin-top:2px}
+ .mobileTop .date{display:flex;flex-direction:column;align-items:flex-end;line-height:1.25}
+ .mobileTop .date strong{font-size:11px;color:#4e554a;text-transform:capitalize}
+ .mobileTop .date span{font-size:11px;color:#9a968b;margin-top:3px;font-variant-numeric:tabular-nums}
+ .mobileWelcome{display:flex;align-items:end;justify-content:space-between;padding:18px 2px 13px}
+ .mobileWelcome span{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#8b8a80}
+ .mobileWelcome h1{font:700 28px Georgia,serif;margin:2px 0 0;color:#263022}
+ .calendarLaunch{border:0;background:#e5eadf;color:#344331;border-radius:13px;padding:11px 13px;font-size:12px;font-weight:700}
+ .calendarLaunch b{font-size:17px;margin-left:5px}
+ .stats{gap:10px}
+ .stat.card{min-height:91px;border:0;background:#fffdf8;box-shadow:0 5px 18px #4c513b0c}
+ .stat span{font-size:10px;letter-spacing:.15px}
+ .stat b{font-size:27px;color:#344331}
+ #calendarSection{display:none;margin-top:0}
+ body.calendarMode #calendarSection{display:block}
+ body.calendarMode .mobileWelcome,
+ body.calendarMode .stats,
+ body.calendarMode .twocol,
+ body.calendarMode #reservationList,
+ body.calendarMode #expensesSection,
+ body.calendarMode #financeSection{display:none!important}
+ .mobileCalendarTitle{display:flex;align-items:center;justify-content:space-between;padding:10px 0 16px}
+ .mobileCalendarTitle button{width:42px;height:42px;border:0;border-radius:13px;background:#fffdf8;font-size:26px;color:#344331}
+ .mobileCalendarTitle div{text-align:center}
+ .mobileCalendarTitle small{display:block;font-size:8px;letter-spacing:2px;color:#99958a}
+ .mobileCalendarTitle b{display:block;font:700 21px Georgia,serif;margin-top:2px}
+ .mobileCalendarTitle span{width:42px}
+ #calendarSection>.sectionhead{background:#fffdf8;padding:8px 10px;border-radius:14px 14px 0 0;margin:0}
+ #calendarSection>.sectionhead h2{font-size:13px}
+ .calendar{border-radius:0 0 16px 16px!important;border-top:0!important;background:#fffdf8}
+ .grid{min-width:900px!important;grid-template-columns:68px repeat(31,minmax(44px,1fr))!important}
+ .bottom{grid-template-columns:repeat(3,1fr)!important;height:calc(72px + env(safe-area-inset-bottom));padding:7px 18px calc(6px + env(safe-area-inset-bottom));background:#fffdf8f2}
+ .bottom button{font-size:10px;min-height:53px;border-radius:13px;transition:.15s}
+ .bottom button i{font-size:21px;margin-bottom:3px}
+ .bottom button.active{color:#344331;font-weight:700}
+ .bottom .reserve{position:relative}
+ .bottom .reserve i{background:#53654a;color:#fff;width:42px;height:42px;line-height:42px;border-radius:14px;margin:-17px auto 2px;box-shadow:0 6px 16px #53654a35}
+ .bottom .reserve span{font-weight:700;color:#53654a}
+ .twocol .card{border:0}
+ .panel:before{content:"";display:block;width:38px;height:4px;border-radius:99px;background:#d6d1c5;margin:-7px auto 14px}
+}
+@media(min-width:901px){.mobileCalendarTitle,.mobileWelcome{display:none}}
+</style>
 </head><body>
-<div class="app" id="app"><aside class="side"><div class="brand">OLIVA APART<small>BODRUM</small></div><div class="nav"><button class="active">⌂ &nbsp; Ana Sayfa</button><button onclick="scrollCal()">▣ &nbsp; Rezervasyon Takvimi</button><button onclick="openModal()">＋ &nbsp; Yeni Rezervasyon</button><button onclick="showReservations()">☷ &nbsp; Rezervasyonlar</button><button>⌂ &nbsp; Evler</button><button>♙ &nbsp; Misafirler</button><button onclick="showExpenses()">▤ &nbsp; Giderler</button><button onclick="showFinance()">₺ &nbsp; Finans</button></div></aside><main class="main"><div class="mobileTop"><div class="mbrand">OLIVA APART<small>BODRUM</small></div><div class="date" id="mobileDate"></div></div><div class="top"><div class="hello"><h1>İyi günler 👋</h1><p>OLIVA APART Yönetim Sistemine Hoş Geldiniz. · V5 Mobile</p></div><div><button class="primary" onclick="openModal()">+ Yeni Rezervasyon</button></div></div><div class="stats"><div class="card stat"><span>Bugün Giriş</span><b id="inToday">0</b></div><div class="card stat"><span>Bugün Çıkış</span><b id="outToday">0</b></div><div class="card stat"><span>Konaklayan</span><b id="staying">0</b></div><div class="card stat"><span>Boş Ev</span><b id="emptyHouses">8</b></div><div class="card stat"><span>Bu Ay Gelir</span><b id="monthRevenue" class="money">₺0</b></div><div class="card stat"><span>Doluluk / Bugün</span><b id="occupancy">%0</b></div></div><section class="section" id="calendarSection"><div class="sectionhead"><h2>Rezervasyon Takvimi</h2><div><button class="ghost" onclick="changeMonth(-1)">‹</button> <span id="monthLabel" style="color:var(--muted);font-size:12px;margin:0 8px"></span> <button class="ghost" onclick="changeMonth(1)">›</button></div></div><div class="calendar"><div class="grid" id="cal"></div></div></section><section class="section twocol"><div class="card"><div class="sectionhead"><h2>Bugün Giriş Yapacaklar</h2><span class="badge" id="inBadge">0 misafir</span></div><div id="inList"></div></div><div class="card"><div class="sectionhead"><h2>Bugün Çıkış Yapacaklar</h2><span class="badge" id="outBadge">0 misafir</span></div><div id="outList"></div></div></section><section class="section card hidden" id="reservationList"><div class="sectionhead"><h2>Tüm Rezervasyonlar</h2><button class="ghost" onclick="document.getElementById('reservationList').classList.add('hidden')">Kapat</button></div><div id="allReservations"></div></section>
+<div class="app" id="app"><aside class="side"><div class="brand">OLIVA APART<small>BODRUM</small></div><div class="nav"><button class="active">⌂ &nbsp; Ana Sayfa</button><button onclick="scrollCal()">▣ &nbsp; Rezervasyon Takvimi</button><button onclick="openModal()">＋ &nbsp; Yeni Rezervasyon</button><button onclick="showReservations()">☷ &nbsp; Rezervasyonlar</button><button>⌂ &nbsp; Evler</button><button>♙ &nbsp; Misafirler</button><button onclick="showExpenses()">▤ &nbsp; Giderler</button><button onclick="showFinance()">₺ &nbsp; Finans</button></div></aside><main class="main"><div class="mobileTop">
+<div class="mobileBrand"><img src="icon-192.png" alt="OLIVA"><div><b>OLIVA APART</b><small>BODRUM</small></div></div>
+<div class="date"><strong id="mobileDateLong"></strong><span id="mobileDateNumeric"></span></div>
+</div>
+<div class="mobileWelcome">
+  <div><span>Yönetim Paneli</span><h1>Bugün</h1></div>
+  <button class="calendarLaunch" onclick="mobileCalendar()">Takvimi Aç <b>›</b></button>
+</div><div class="top"><div class="hello"><h1>İyi günler 👋</h1><p>OLIVA APART Yönetim Sistemine Hoş Geldiniz. · V6 Premium Mobile</p></div><div><button class="primary" onclick="openModal()">+ Yeni Rezervasyon</button></div></div><div class="stats"><div class="card stat"><span>Bugün Giriş</span><b id="inToday">0</b></div><div class="card stat"><span>Bugün Çıkış</span><b id="outToday">0</b></div><div class="card stat"><span>Konaklayan</span><b id="staying">0</b></div><div class="card stat"><span>Boş Ev</span><b id="emptyHouses">8</b></div><div class="card stat"><span>Bu Ay Gelir</span><b id="monthRevenue" class="money">₺0</b></div><div class="card stat"><span>Doluluk / Bugün</span><b id="occupancy">%0</b></div></div><section class="section" id="calendarSection"><div class="mobileCalendarTitle"><button onclick="mobileHome()">‹</button><div><small>REZERVASYON</small><b>Takvim</b></div><span></span></div><div class="sectionhead"><h2>Rezervasyon Takvimi</h2><div><button class="ghost" onclick="changeMonth(-1)">‹</button> <span id="monthLabel" style="color:var(--muted);font-size:12px;margin:0 8px"></span> <button class="ghost" onclick="changeMonth(1)">›</button></div></div><div class="calendar"><div class="grid" id="cal"></div></div></section><section class="section twocol"><div class="card"><div class="sectionhead"><h2>Bugün Giriş Yapacaklar</h2><span class="badge" id="inBadge">0 misafir</span></div><div id="inList"></div></div><div class="card"><div class="sectionhead"><h2>Bugün Çıkış Yapacaklar</h2><span class="badge" id="outBadge">0 misafir</span></div><div id="outList"></div></div></section><section class="section card hidden" id="reservationList"><div class="sectionhead"><h2>Tüm Rezervasyonlar</h2><button class="ghost" onclick="document.getElementById('reservationList').classList.add('hidden')">Kapat</button></div><div id="allReservations"></div></section>
 <section class="section card hidden" id="expensesSection"><div class="sectionhead"><h2>Giderler</h2><button class="primary" onclick="openExpenseModal()">+ Yeni Gider</button></div><div class="stats" style="margin:10px 0"><div class="card stat"><span>Toplam Gider</span><b id="expenseTotal">₺0</b></div><div class="card stat"><span>Bu Ay</span><b id="expenseMonth">₺0</b></div></div><div id="expenseList"></div></section>
 <section class="section card hidden" id="financeSection"><div class="sectionhead"><h2>Finans / Kâr-Zarar</h2><select id="financePeriod" onchange="renderFinance()" style="padding:9px;border:1px solid var(--line);border-radius:9px"><option value="year">Bu Yıl</option><option value="month">Bu Ay</option><option value="all">Tümü</option></select></div><div class="financecards" style="margin-top:12px"><div class="card stat"><span>Rezervasyon Cirosu</span><b id="finRevenue">₺0</b></div><div class="card stat"><span>Tahsil Edilen</span><b id="finPaid">₺0</b></div><div class="card stat"><span>Kalan Alacak</span><b id="finDue">₺0</b></div><div class="card stat"><span>Toplam Gider</span><b id="finExpense">₺0</b></div></div><div class="card stat" style="margin-top:10px"><span>Gerçekleşen Net Kâr (Tahsilat − Gider)</span><b id="finProfit" class="positive">₺0</b></div><div id="monthlyFinance"></div></section>
 </main></div>
 <nav class="bottom">
-<button onclick="mobileHome()"><i>⌂</i>Ana Sayfa</button>
-<button onclick="mobileCalendar()"><i>▣</i>Takvim</button>
-<button class="plus" onclick="openModal()"><i>＋</i>Rezervasyon</button>
-<button onclick="showFinance()"><i>₺</i>Finans</button>
-<button onclick="showMobileMore()"><i>☰</i>Daha Fazla</button>
+<button id="navHome" class="active" onclick="mobileHome()"><i>⌂</i><span>Ana Sayfa</span></button>
+<button id="navReservation" class="reserve" onclick="openModal()"><i>＋</i><span>Rezervasyon</span></button>
+<button id="navFinance" onclick="showFinance();setMobileNav('finance')"><i>₺</i><span>Finans</span></button>
 </nav>
 <div class="modal" id="modal"><div class="panel"><div class="sectionhead"><h2>Yeni Rezervasyon</h2><button class="ghost" onclick="closeModal()">✕</button></div><div class="form"><label>Misafir Ad Soyad<input id="guest" placeholder="Ad Soyad"></label><label>Telefon<input id="phone" placeholder="05xx xxx xx xx"></label><label>Giriş Tarihi<input type="date" id="checkin"></label><label>Çıkış Tarihi<input type="date" id="checkout"></label><label>Ev<select id="house"></select></label><label>Yetişkin<input id="adults" type="number" min="1" value="2"></label><label>Çocuk<input id="children" type="number" min="0" value="0"></label><label>Toplam Ücret<input type="number" id="total" min="0" placeholder="₺"></label><label>Alınan Ödeme<input type="number" id="paid" min="0" placeholder="₺"></label><label>Ödeme Yöntemi<select id="paymentMethod"><option value="">Seçiniz</option><option>Nakit</option><option>Kredi Kartı</option><option>Havale/EFT</option><option>Diğer</option></select></label><label>Rezervasyon Kaynağı<select id="source"><option>Telefon</option><option>WhatsApp</option><option>Instagram</option><option>Booking</option><option>Airbnb</option><option>Web</option><option>Diğer</option></select></label></div><div class="modalmsg" id="saveMsg"></div><div class="actions"><button class="ghost" onclick="closeModal()">Vazgeç</button><button class="primary" id="saveBtn" onclick="saveReservation()">Rezervasyonu Kaydet</button></div></div></div><div class="modal" id="detailModal"><div class="panel"><div class="sectionhead"><h2>Rezervasyon Detayı</h2><button class="ghost" onclick="closeDetail()">✕</button></div><div id="detailBody"></div><div class="actions"><button class="danger primary" onclick="cancelReservation()">Rezervasyonu İptal Et</button><button class="ghost" onclick="closeDetail()">Kapat</button><button class="primary" onclick="editReservation()">Düzenle</button></div></div></div>
 <div class="modal" id="expenseModal"><div class="panel"><div class="sectionhead"><h2>Yeni Gider</h2><button class="ghost" onclick="closeExpenseModal()">✕</button></div><div class="form"><label>Tarih<input type="date" id="expenseDate"></label><label>Kategori<select id="expenseCategory"><option>Elektrik</option><option>Su</option><option>Personel</option><option>Temizlik</option><option>Bakım-Onarım</option><option>Market/Sarf</option><option>Komisyon</option><option>Vergi</option><option>İnternet</option><option>Havuz-Bahçe</option><option>Diğer</option></select></label><label>Açıklama<input id="expenseDescription"></label><label>Tutar<input type="number" id="expenseAmount" min="0" placeholder="₺"></label><label>Ödeme Yöntemi<select id="expensePayment"><option value="">Seçiniz</option><option>Nakit</option><option>Kredi Kartı</option><option>Banka/Havale</option><option>Diğer</option></select></label><label>Not<input id="expenseNotes"></label></div><div class="modalmsg" id="expenseMsg"></div><div class="actions"><button class="ghost" onclick="closeExpenseModal()">Vazgeç</button><button class="primary" onclick="saveExpense()">Gideri Kaydet</button></div></div></div>
@@ -115,14 +177,38 @@ async function saveExpense(){const a=Number(expenseAmount.value||0);if(!expenseD
 function showExpenses(){expensesSection.classList.remove('hidden');financeSection.classList.add('hidden');expensesSection.scrollIntoView({behavior:'smooth'});renderExpenses()}
 function renderExpenses(){const now=new Date(),ms=localDate(new Date(now.getFullYear(),now.getMonth(),1)),me=localDate(new Date(now.getFullYear(),now.getMonth()+1,1));expenseTotal.textContent=money(expenses.reduce((s,e)=>s+Number(e.amount),0));expenseMonth.textContent=money(expenses.filter(e=>e.expense_date>=ms&&e.expense_date<me).reduce((s,e)=>s+Number(e.amount),0));expenseList.innerHTML=expenses.map(e=>`<div class="listitem expense-row"><div><b>${esc(e.category)}</b><div style="font-size:12px;color:var(--muted)">${e.expense_date} · ${esc(e.description||'')}</div></div><div style="text-align:right"><b>${money(e.amount)}</b><button class="ghost" style="margin-left:8px" onclick="deleteExpense('${e.id}')">Sil</button></div></div>`).join('')||'<p style="color:var(--muted)">Henüz gider yok.</p>'}
 async function deleteExpense(id){if(!confirm('Bu gider silinsin mi?'))return;try{await api('expenses?id=eq.'+id,{method:'DELETE'});toast('Gider silindi');await loadData();showExpenses()}catch(e){toast(e.message)}}
-function showFinance(){financeSection.classList.remove('hidden');expensesSection.classList.add('hidden');financeSection.scrollIntoView({behavior:'smooth'});renderFinance()}
+function showFinance(){document.body.classList.remove('calendarMode');financeSection.classList.remove('hidden');expensesSection.classList.add('hidden');financeSection.scrollIntoView({behavior:'smooth'});renderFinance()}
 function renderFinance(){const now=new Date(),period=financePeriod.value;let start='0000-01-01',end='9999-12-31';if(period==='year'){start=now.getFullYear()+'-01-01';end=(now.getFullYear()+1)+'-01-01'}if(period==='month'){start=localDate(new Date(now.getFullYear(),now.getMonth(),1));end=localDate(new Date(now.getFullYear(),now.getMonth()+1,1))}const rs=reservations.filter(r=>r.check_in>=start&&r.check_in<end),es=expenses.filter(e=>e.expense_date>=start&&e.expense_date<end);const rev=rs.reduce((s,r)=>s+Number(r.total_price),0),paid=rs.reduce((s,r)=>s+Number(r.paid_amount),0),ex=es.reduce((s,e)=>s+Number(e.amount),0);finRevenue.textContent=money(rev);finPaid.textContent=money(paid);finDue.textContent=money(rev-paid);finExpense.textContent=money(ex);finProfit.textContent=money(paid-ex);finProfit.className=paid-ex>=0?'positive':'danger';let rows='';for(let m=0;m<12;m++){const a=now.getFullYear()+'-'+String(m+1).padStart(2,'0')+'-01',b=m===11?(now.getFullYear()+1)+'-01-01':now.getFullYear()+'-'+String(m+2).padStart(2,'0')+'-01';const mp=reservations.filter(r=>r.check_in>=a&&r.check_in<b).reduce((s,r)=>s+Number(r.paid_amount),0),mx=expenses.filter(e=>e.expense_date>=a&&e.expense_date<b).reduce((s,e)=>s+Number(e.amount),0);if(mp||mx)rows+=`<div class="listitem"><div><b>${new Date(now.getFullYear(),m,1).toLocaleDateString('tr-TR',{month:'long'})}</b></div><div>Tahsilat ${money(mp)} · Gider ${money(mx)} · <b>Net ${money(mp-mx)}</b></div></div>`}monthlyFinance.innerHTML='<h3 style="font-size:14px;margin-top:20px">Aylık Özet</h3>'+(rows||'<p style="color:var(--muted)">Bu dönem için hareket yok.</p>')}
 
 
-function setMobileDate(){const e=document.getElementById('mobileDate');if(e)e.innerHTML=new Date().toLocaleDateString('tr-TR',{weekday:'long',day:'numeric',month:'long'})}
-function mobileHome(){document.getElementById('reservationList').classList.add('hidden');document.getElementById('expensesSection').classList.add('hidden');document.getElementById('financeSection').classList.add('hidden');window.scrollTo({top:0,behavior:'smooth'})}
-function mobileCalendar(){document.getElementById('reservationList').classList.add('hidden');document.getElementById('expensesSection').classList.add('hidden');document.getElementById('financeSection').classList.add('hidden');scrollCal()}
-function showMobileMore(){document.getElementById('moreModal').classList.add('show')}
+
+function setMobileDate(){
+ const d=new Date(), days=['Pazar','Pazartesi','Salı','Çarşamba','Perşembe','Cuma','Cumartesi'];
+ const months=['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
+ const a=document.getElementById('mobileDateLong'), b=document.getElementById('mobileDateNumeric');
+ if(a)a.textContent=d.getDate()+' '+months[d.getMonth()]+' '+days[d.getDay()];
+ if(b)b.textContent=String(d.getDate()).padStart(2,'0')+'.'+String(d.getMonth()+1).padStart(2,'0')+'.'+d.getFullYear();
+}
+function setMobileNav(which){
+ ['navHome','navFinance'].forEach(id=>document.getElementById(id)?.classList.remove('active'));
+ if(which==='home')document.getElementById('navHome')?.classList.add('active');
+ if(which==='finance')document.getElementById('navFinance')?.classList.add('active');
+}
+function mobileHome(){
+ document.body.classList.remove('calendarMode');
+ document.getElementById('reservationList').classList.add('hidden');
+ document.getElementById('expensesSection').classList.add('hidden');
+ document.getElementById('financeSection').classList.add('hidden');
+ setMobileNav('home'); window.scrollTo({top:0,behavior:'smooth'});
+}
+function mobileCalendar(){
+ document.body.classList.add('calendarMode');
+ document.getElementById('reservationList').classList.add('hidden');
+ document.getElementById('expensesSection').classList.add('hidden');
+ document.getElementById('financeSection').classList.add('hidden');
+ setMobileNav(''); window.scrollTo({top:0,behavior:'smooth'});
+}
+function showMobileMore(){}
 setMobileDate();
 
 if('serviceWorker'in navigator)navigator.serviceWorker.register('./service-worker.js');start();
